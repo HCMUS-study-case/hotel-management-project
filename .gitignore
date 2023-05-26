@@ -1,0 +1,4 @@
+**/node_modules/
+**/venv/
+frontend/package-lock.json
+backend/Pipfile.lock
