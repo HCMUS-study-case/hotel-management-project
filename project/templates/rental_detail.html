@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Chi tiết phiếu thuê</h1>
+  <table class="table">
+    <tr>
+      <th>Phòng</th>
+      <td>{{ rental.room_name }}</td>
+    </tr>
+    <tr>
+      <th>Tên khách hàng</th>
+      <td>{{ rental.customer_name }}</td>
+    </tr>
+    <tr>
+      <th>Loại khách</th>
+      <td>{{ rental.customer_type }}</td>
+    </tr>
+    <tr>
+      <th>CCCD/CMND</th>
+      <td>{{ rental.customer_id }}</td>
+    </tr>
+    <tr>
+      <th>Địa chỉ</th>
+      <td>{{ rental.customer_address }}</td>
+    </tr>
+    <tr>
+      <th>Ngày bắt đầu</th>
+      <td>{{ rental.start_date }}</td>
+    </tr>
+    <tr>
+      <th>Ngày kết thúc</th>
+      <td>{{ rental.payment_date }}</td>
+    </tr>
+    <tr>
+      <th>Số ngày thuê</th>
+      <td>{{ rental.number_of_days }}</td>
+    </tr>
+    <tr>
+      <th>Số người thuê</th>
+      <td>{{ rental.num_customers }}</td>
+    </tr>
+    <tr>
+      <th>Đơn giá</th>
+      <td>{{ rental.unit_price }}</td>
+    </tr>
+    <tr>
+      <th>Tổng tiền</th>
+      <td>{{ rental.total_amount }}</td>
+    </tr>
+    <tr>
+      <th>Thanh toán</th>
+      <td>{{ rental.paid }}</td>
+    </tr>
+  </table>
+  <a href="{{ url_for('rental_payment', rental_id=rental.id) }}" class="btn btn-primary">Thanh toán</a>
+  <a href="{{ url_for('rental_list') }}">Quay lại danh sách phiếu thuê</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!-- payment.html -->
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Thanh toán phiếu thuê</h1>
+  <p>Thông tin phiếu thuê:</p>
+  <table class="table">
+    <tr>
+      <th>Phòng</th>
+      <td>{{ rental.room_name }}</td>
+    </tr>
+    <tr>
+      <th>Tên khách hàng</th>
+      <td>{{ rental.customer_name }}</td>
+    </tr>
+    <tr>
+      <th>Tổng số tiền cần thanh toán</th>
+      <td>{{ rental.total_amount }}</td>
+    </tr>
+  </table>
+  <form method="POST" action="{{ url_for('rental_payment', rental_id=rental.id) }}">
+    <button type="submit" class="btn btn-primary">Thanh toán</button>
+  </form>
+{% endblock %}
