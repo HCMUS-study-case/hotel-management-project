@@ -8,6 +8,10 @@ flask = "*"
 psycopg2-binary = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
+python-dotenv = "*"
+flask-argon2 = "*"
+flask-script = "*"
+flask-restful = "*"
 
 [dev-packages]
 
