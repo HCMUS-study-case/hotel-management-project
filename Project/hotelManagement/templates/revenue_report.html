@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Báo Cáo Doanh Thu Theo Loại Phòng</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Loại Phòng</th>
+        <th>Doanh Thu</th>
+        <th>Tỉ lệ doanh thu (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for revenue in revenue_by_room_type %}
+        <tr>
+          <td>{{ revenue.room_type }}</td>
+          <td>{{ revenue.total_revenue }}</td>
+          <td>{{ revenue.revenue_ratio }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

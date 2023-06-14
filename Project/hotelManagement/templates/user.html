@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="user-profile">
+        <h1>Hồ sơ tài khoản {{ user.username }} </h1>
+        <p><strong>Họ và tên:</strong> {{ user.name }}</p>
+        <p><strong>Căn cước công dân:</strong> {{ user.citizen_id }}</p>
+        <p><strong>Nơi cấp:</strong> {{ user.place_issued }}</p>
+        <p><strong>Ngày sinh:</strong> {{ user.birthdate }}</p>
+        <p><strong>Quê quán:</strong> {{ user.home_town }}</p>
+        <p><strong>Giới tính:</strong> {{ user.gender }}</p>
+        <p><strong>Địa chỉ:</strong> {{ user.address }}</p>
+        <p><strong>SĐT:</strong> {{ user.phone_number }}</p>
+        <p><strong>Vai trò:</strong> {{ user.role }}</p>
+        <p><strong>Tên đăng nhập:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <form method="POST" action="{{ url_for('delete_user', username=user.username) }}" onsubmit="return confirm('Có chắc chắn xóa tài khoản?');">
+            <button type="submit" class="btn btn-danger" formnovalidate>Xóa tài khoản</button>
+        </form>
+    </div>
+{% endblock %}
