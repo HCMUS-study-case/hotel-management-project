@@ -1,6 +1,6 @@
 # hotel-management-project
 
-# Thông tin nhóm
+# Thông tin nhóm: Group-07
 | MSSV | Họ và Tên |
 | :---: | :---: |
 | 19120606 | NGUYỄN ĐÌNH HOÀNG NGUYÊN | 
