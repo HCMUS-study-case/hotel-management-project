@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Báo Cáo Mật Độ Sử Dụng Phòng</h1>
+    <h2>Tháng: {{ month }}</h2>
+    <table>
+    <thead>
+        <tr>
+        <th>STT</th>
+        <th>Phòng</th>
+        <th>Số Ngày Thuê</th>
+        <th>Tỷ Lệ (%)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for index, data in report_data.items() %}
+        <tr>
+        <td>{{ index }}</td>
+        <td>{{ data.room }}</td>
+        <td>{{ data.days_rented }}</td>
+        <td>{{ data.percentage }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <h1>Danh sách phiếu thuê</h1>
+  {% if rentals %}
+  <table>
+    <thead>
+      <tr>
+        <th>Tên phòng</th>
+        <th>Tên khách hàng</th>
+        <th>Loại khách hàng</th>
+        <th>CCCD/CMND</th>
+        <th>Ngày bắt đầu</th>
+        <th>Ngày trả phòng</th>
+        <th>Chi tiết</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for rental in rentals %}
+        <tr>
+          <td>{{ rental.room_name }}</td>
+          <td>{{ rental.customer_name }}</td>
+          <td>{{ rental.customer_type }}</td>
+          <td>{{ rental.customer_id }}</td>
+          <td>{{ rental.start_date }}</td>
+          <td>{{ rental.payment_date }}</td>
+          <td><a href="{{ url_for('rental_detail', rental_id=rental.id) }}">Chi tiết</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p>Không có phiếu thuê nào.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Thông tin tất cả tài khoản</h1>
+
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Họ và tên</th>
+        <th>Căn cước công dân</th>
+        <th>Nơi cấp</th>
+        <th>Ngày sinh</th>
+        <th>Quê quán</th>
+        <th>Giới tính</th>
+        <th>Địa chỉ</th>
+        <th>SĐT</th>
+        <th>Vai trò</th>
+        <th>Tên đăng nhập</th>
+        <th>Email</th>
+        <th>Mật khẩu</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{ user.id }}</td>
+        <td><a href="{{ url_for('user_posts', username=user.username) }}">{{ user.name }}</a></td>
+        <td>{{ user.citizen_id }}</td>
+        <td>{{ user.place_issued }}</td>
+        <td>{{ user.birthdate }}</td>
+        <td>{{ user.home_town }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.address }}</td>
+        <td>{{ user.phone_number }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}
