@@ -22,7 +22,7 @@ Trong thời đại 4.0 hiện nay, khách hàng có xu hướng sử dụng cá
 
 **2. Clone project**
 ```
-git clone -b nguyen https://github.com/HCMUS-study-case/hotel-management-project
+git clone https://github.com/HCMUS-study-case/hotel-management-project
 ```
 
 **3. Cài đặt các thư viện từ 'requirements.txt'**
