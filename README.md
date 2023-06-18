@@ -37,7 +37,7 @@ pip3 install -r requirements.txt
 
 **5. Link demo**
 ```
-
+https://drive.google.com/file/d/1yyskYNvG-gcspn1b8vOpRcp9qUDMaLa8/view
 ```
 
 **6. Những gì đã làm được**
