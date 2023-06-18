@@ -34,3 +34,21 @@ pip3 install -r requirements.txt
 - Chạy flaskblog.py trên Visual Studio rồi truy cập đường dẫn ```http://127.0.0.1:5000``` để chạy trang web.
 - Đăng ký nhanh: ```http://127.0.0.1:5000/login_admin```.
 - Thực hiện các chức năng.
+
+**5. Link demo**
+```
+
+```
+
+**6. Những gì đã làm được**
+- Quy trình lập danh mục phòng.
+- Quy trình lập phiếu thuê phòng.
+- Quy trình tra cứu phòng.
+- Quy trình lập hóa đơn thanh toán.
+- Quy trình lập báo cáo hàng tháng.
+- Quy trình lập thay đổi quy định.
+- Quy trình tạo tài khoản.
+
+**7. Những gì cần làm thêm**
+- Làm sao để trang web bắt mắt hơn.
+- Xuất báo cáo ra file.
